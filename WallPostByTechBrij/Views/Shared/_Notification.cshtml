@@ -1,0 +1,63 @@
+﻿
+
+<div style="background-color:transparent; width: 240px">
+    <button type="button" style="background-color:goldenrod; width: 240px">Suggetion Notification</button>
+    <p> &nbsp;&nbsp;&nbsp; You may know Rasel Ahmed</p>
+    <button type="button" style="background-color: gold; width: 100px;float: right">Add Friend</button>
+
+</div>
+
+<button type="button" style="background-color: burlywood; width: 240px">Wall Notification</button>
+
+
+<div class="notification" data-bind="visible: newPosts().length > 0"><a data-bind="    click: loadNewPosts"> <span data-bind="    text: newPosts().length"></span> new post(s)</a></div>
+
+<div data-bind="foreach: posts" style="width: 240px">
+
+    <a class="notification" data-bind="click:loadNewLikes,visible:NewLikes().length>0" style="width: 240px">
+        <span data-bind=" text: NewLikes().length" style="width: 240px"></span>  new like notification by
+        <span data-bind="text:notificationName"></span><br />
+    </a>
+
+    <a class="notification" data-bind="click: loadNewComments, visible: NewComments().length > 0" style="width: 240px">
+        <span data-bind="    text: NewComments().length" style="width: 240px"></span> new comment notification by
+        <span data-bind="text:notificationName"></span><br />
+    </a>
+
+
+</div>
+
+
+@*<div class="content-wrapper" style="width: 240px">
+    <ul data-bind="foreach:friendshipNotification">
+        <li><span data-bind="text:friendsNotificationbyName"></span></li>
+    </ul>
+</div>*@
+
+
+
+
+
+@*<ul id="msgHolder" style="width: 240px" data-bind="foreach: posts">
+        <li class="postHolder">
+            <div class="postFooter">
+                <div class="commentSection" style="width: 240px">
+                    <ul data-bind="foreach: NewComments">
+                        <li class="commentHolder">
+                            <img data-bind="attr: { src: CommentedByAvatar }"><p><a data-bind="text: CommentedByName"></a>: <span data-bind="    html: Message"></span></p>
+                            <div class="commentFooter"> <span class="timeago" data-bind="text: CommentedDate"></span>&nbsp;</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>*@
+
+
+
+
+
+
+
+
+
